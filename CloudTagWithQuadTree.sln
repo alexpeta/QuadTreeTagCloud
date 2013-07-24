@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudTagWithQuadTree", "CloudTagWithQuadTree\CloudTagWithQuadTree.csproj", "{6C84347F-F84D-45E7-8550-06680C2D8424}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{66AA394B-69C6-4780-BD6C-B227BA9CF511}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTests", "ConsoleTests\ConsoleTests.csproj", "{EDA395A9-6FBC-46DD-8744-19F9500073D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C84347F-F84D-45E7-8550-06680C2D8424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C84347F-F84D-45E7-8550-06680C2D8424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C84347F-F84D-45E7-8550-06680C2D8424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C84347F-F84D-45E7-8550-06680C2D8424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66AA394B-69C6-4780-BD6C-B227BA9CF511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66AA394B-69C6-4780-BD6C-B227BA9CF511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66AA394B-69C6-4780-BD6C-B227BA9CF511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66AA394B-69C6-4780-BD6C-B227BA9CF511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDA395A9-6FBC-46DD-8744-19F9500073D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDA395A9-6FBC-46DD-8744-19F9500073D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDA395A9-6FBC-46DD-8744-19F9500073D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDA395A9-6FBC-46DD-8744-19F9500073D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
