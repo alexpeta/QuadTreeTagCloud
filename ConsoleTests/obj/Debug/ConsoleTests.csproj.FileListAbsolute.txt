@@ -6,3 +6,6 @@ c:\users\alexanpe\documents\visual studio 2012\Projects\CloudTagWithQuadTree\Con
 c:\users\alexanpe\documents\visual studio 2012\Projects\CloudTagWithQuadTree\ConsoleTests\obj\Debug\ConsoleTests.csprojResolveAssemblyReference.cache
 c:\users\alexanpe\documents\visual studio 2012\Projects\CloudTagWithQuadTree\ConsoleTests\obj\Debug\ConsoleTests.exe
 c:\users\alexanpe\documents\visual studio 2012\Projects\CloudTagWithQuadTree\ConsoleTests\obj\Debug\ConsoleTests.pdb
+C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\bin\Debug\ConsoleTests.exe.config
+C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\obj\Debug\ConsoleTests.exe
+C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\obj\Debug\ConsoleTests.pdb

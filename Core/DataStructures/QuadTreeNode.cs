@@ -13,14 +13,14 @@ namespace Core.DataStructures
 
     public QuadTreeNode(object value)
     {
-      Children = new QuadTreeNode[4];
+      Children = new QuadTreeNode[Core.Enums.GlobalConstants.TREE_CHILDREN_COUNT];
       Value = value;
     }
 
     #region Public Methods
     public void Insert(QuadTreeNode nodeToInsert)
     {
-      for (int i = 0; i < 4; i++)
+      for (int i = 0; i < Core.Enums.GlobalConstants.TREE_CHILDREN_COUNT; i++)
       {       
         if (Children[i] == null)
         {
@@ -29,9 +29,9 @@ namespace Core.DataStructures
         }
       }
 
-      for (int i = 0; i < 4; i++)
+      for (int i = 0; i < Core.Enums.GlobalConstants.TREE_CHILDREN_COUNT; i++)
       {
-        if (Children[i].IsFull())
+        if (Children[i].HasChildrenFull())
         {
           continue;
         }
@@ -44,9 +44,9 @@ namespace Core.DataStructures
     }
     #endregion Public Methods
 
-    private bool IsFull()
+    private bool HasChildrenFull()
     {
-      return Children.Count(c => c!= null && c.Value != null) == 4;
+      return Children.Count(c => c != null && c.Value != null) == Core.Enums.GlobalConstants.TREE_CHILDREN_COUNT;
     }
 
   }
