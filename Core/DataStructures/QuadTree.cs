@@ -22,6 +22,12 @@ namespace Core.DataStructures
     {
       Root.Insert(nodeToInsert);
     }
+
+    public void Visit()
+    {
+      Root.Visit();
+    }
+
     #endregion Public Methods
   }
 }

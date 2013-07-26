@@ -1,4 +1,5 @@
 ﻿using Core.DataStructures;
+using Core.Geometry;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,15 @@ namespace ConsoleTests
   {
     static void Main(string[] args)
     {
-      QuadTreeNode root = new QuadTreeNode("root");
+
+      Rectangle rootRectangle = new Rectangle(1, 1, 100, 100);
+
+
+
+
+
+
+      QuadTreeNode root = new QuadTreeNode(rootRectangle);
       QuadTree tree = new QuadTree(root);
 
       QuadTreeNode second = new QuadTreeNode("second");
@@ -31,6 +40,10 @@ namespace ConsoleTests
       tree.Insert(seventh);
       tree.Insert(eigth);
       tree.Insert(ninth);
+
+
+      tree.Visit();
+      Console.ReadLine();
 
     }
   }

@@ -9,3 +9,8 @@ c:\users\alexanpe\documents\visual studio 2012\Projects\CloudTagWithQuadTree\Con
 C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\bin\Debug\ConsoleTests.exe.config
 C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\obj\Debug\ConsoleTests.exe
 C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\obj\Debug\ConsoleTests.pdb
+C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\bin\Debug\ConsoleTests.exe
+C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\bin\Debug\ConsoleTests.pdb
+C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\bin\Debug\Core.dll
+C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\bin\Debug\Core.pdb
+C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\obj\Debug\ConsoleTests.csprojResolveAssemblyReference.cache

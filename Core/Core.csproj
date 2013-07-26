@@ -41,11 +41,11 @@
   <ItemGroup>
     <Compile Include="DataStructures\QuadTree.cs" />
     <Compile Include="DataStructures\QuadTreeNode.cs" />
+    <Compile Include="Enums\GlobalConstants.cs" />
+    <Compile Include="Geometry\Rectangle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Geometry\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
