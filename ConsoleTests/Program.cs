@@ -15,12 +15,7 @@ namespace ConsoleTests
   {
     static void Main(string[] args)
     {
-        var rootRectangle = RectangleBuilder.ARectangle()
-                                     .WithMaxWidth(500)
-                                     .WithMaxHeight(300)
-                                     .WithCanvasMaxHeight(900)
-                                     .WithCanvasMaxWidth(1600)
-                                     .Build();
+       var rootRectangle = RectangleBuilder.GetRectangleWithRandomProperties();
 
 
         QuadTreeNode root = NodeBuilder.ANode()
@@ -30,25 +25,27 @@ namespace ConsoleTests
         QuadTree tree = new QuadTree(root);
 
 
-
         for (int i = 0; i < 10; i++)
         {
             var rb = RectangleBuilder.ARectangle()
-                                     .WithMaxWidth(500)
-                                     .WithMaxHeight(300)
-                                     .WithCanvasMaxHeight(900)
-                                     .WithCanvasMaxWidth(1600)
+                                     .WithMaxWidth(400)
+                                     .WithMaxHeight(200)
+                                     .WithCanvasMaxHeight(600)
+                                     .WithCanvasMaxWidth(900)
                                      .Build();
+          
             var rbChildren = RectangleBuilder.ARectangle()
-                                     .WithMaxWidth(500)
-                                     .WithMaxHeight(300)
-                                     .WithCanvasMaxHeight(900)
-                                     .WithCanvasMaxWidth(1600)
+                                     .WithMaxWidth(400)
+                                     .WithMaxHeight(200)
+                                     .WithCanvasMaxHeight(600)
+                                     .WithCanvasMaxWidth(900)
                                      .BuildList(GlbCnst.TREE_CHILDREN_COUNT);
+           
+
 
             var node = NodeBuilder.ANode()
                                   .WithSurface(rb)
-                                  .WithRectangles(rbChildren.ToArray())
+                                  .WithSubSurfaces(rbChildren.ToArray())
                                   .Build();
             tree.Insert(node);
         }

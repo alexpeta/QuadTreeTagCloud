@@ -10,6 +10,10 @@ namespace Core.Enums
   {
 
     public static readonly int TREE_CHILDREN_COUNT = 4; //captain obvious
+    public static readonly int MAX_WIDTH = 900;
+    public static readonly int MAX_HEIGHT = 600;
+
+
 
     #region Constructors
     private GlobalConstants()

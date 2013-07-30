@@ -36,5 +36,11 @@ namespace Core.Geometry
 
     #endregion Constructor
 
+
+    public override string ToString()
+    {
+      return string.Format("w:{0} h:{1} a:{2}", this.Width, this.Height, this.Area);
+    }
+
   }
 }

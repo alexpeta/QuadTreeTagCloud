@@ -9,6 +9,9 @@ namespace Core.Helpers
 {
     public class RectangleBuilder
     {
+        private static Random r = new Random();
+        private static readonly object _syncLock = new object();
+
         public int SizeMaxWidth { get; private set; }
         public int SizeMaxHeight { get; private set; }
         public int MaxCanvasHeight { get; private set; }
@@ -18,6 +21,15 @@ namespace Core.Helpers
         public static RectangleBuilder ARectangle()
         {
             return new RectangleBuilder();
+        }
+        public static Rectangle GetRectangleWithRandomProperties()
+        {
+          return RectangleBuilder.ARectangle()
+                                     .WithMaxWidth(500)
+                                     .WithMaxHeight(300)
+                                     .WithCanvasMaxHeight(900)
+                                     .WithCanvasMaxWidth(1600)
+                                     .Build();
         }
         #endregion Statics
 
@@ -50,15 +62,22 @@ namespace Core.Helpers
 
         public Rectangle Build()
         {
-            Random r = new Random();
-            return new Rectangle(r.Next(1, MaxCanvasHeight), r.Next(1, MaxCanvasWidth), r.Next(1, SizeMaxWidth), r.Next(1, SizeMaxHeight));
+          return new Rectangle(RectangleBuilder.r.Next(1, MaxCanvasHeight), RectangleBuilder.r.Next(1, MaxCanvasWidth), RectangleBuilder.r.Next(1, SizeMaxWidth), RectangleBuilder.r.Next(1, SizeMaxHeight));
         }
         public IEnumerable<Rectangle> BuildList(int count)
         {
-            for (int i = 0; i < count; i++)
+            lock(_syncLock)
             {
-                yield return Build();
+                List<Rectangle> result = new List<Rectangle>();
+
+                for (int i = 0; i < count; i++)
+                {
+                    result.Add(Build());
+                }
+                return result;
             }
         }
+
+
     }
 }

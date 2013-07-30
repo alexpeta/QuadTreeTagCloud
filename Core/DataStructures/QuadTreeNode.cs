@@ -61,7 +61,8 @@ namespace Core.DataStructures
     }
     public void Visit()
     {
-      Console.WriteLine(string.Format("w:{0} h:{1} a:{2}",this.Surface.Width, this.Surface.Height, this.Surface.Area));
+      string display = string.Format("w:{0} h:{1} a:{2}",this.Surface.Width, this.Surface.Height, this.Surface.Area);
+      Console.WriteLine(display);
 
       for (int i = 0; i < Core.Enums.GlobalConstants.TREE_CHILDREN_COUNT; i++)
       {

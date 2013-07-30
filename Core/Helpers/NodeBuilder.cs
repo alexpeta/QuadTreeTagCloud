@@ -27,7 +27,7 @@ namespace Core.Helpers
         #endregion Statics
 
         #region Builder
-        public NodeBuilder WithRectangles(params Rectangle[] rectangles)
+        public NodeBuilder WithSubSurfaces(params Rectangle[] rectangles)
         {
             if (rectangles != null && rectangles.Count() > Core.Enums.GlobalConstants.TREE_CHILDREN_COUNT)
             {
@@ -47,7 +47,10 @@ namespace Core.Helpers
         }
         public QuadTreeNode Build()
         {
-            return new QuadTreeNode(_surface,_rectangles.ToArray());
+            QuadTreeNode result = new QuadTreeNode(_surface,_rectangles.ToArray());
+            _rectangles.Clear();
+            _surface = null;
+            return result;
         }
         #endregion Builder
     }
