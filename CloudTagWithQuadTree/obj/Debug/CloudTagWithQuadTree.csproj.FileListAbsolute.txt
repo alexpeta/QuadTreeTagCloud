@@ -12,3 +12,16 @@ C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\obj\Deb
 C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\obj\Debug\CloudTagWithQuadTree.csproj.GenerateResource.Cache
 C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\obj\Debug\CloudTagWithQuadTree.exe
 C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\obj\Debug\CloudTagWithQuadTree.pdb
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\bin\Debug\CloudTagWithQuadTree.exe.config
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\bin\Debug\CloudTagWithQuadTree.exe
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\bin\Debug\CloudTagWithQuadTree.pdb
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\obj\Debug\CloudTagWithQuadTree.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\obj\Debug\MainWindow.baml
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\obj\Debug\MainWindow.g.cs
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\obj\Debug\App.g.cs
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\obj\Debug\CloudTagWithQuadTree_MarkupCompile.cache
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\obj\Debug\CloudTagWithQuadTree.g.resources
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\obj\Debug\CloudTagWithQuadTree.Properties.Resources.resources
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\obj\Debug\CloudTagWithQuadTree.csproj.GenerateResource.Cache
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\obj\Debug\CloudTagWithQuadTree.exe
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\CloudTagWithQuadTree\obj\Debug\CloudTagWithQuadTree.pdb

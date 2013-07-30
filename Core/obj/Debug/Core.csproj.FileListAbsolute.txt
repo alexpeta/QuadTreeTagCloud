@@ -8,3 +8,8 @@ C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\Core\bin\Debug\Core.pdb
 C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
 C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\Core\obj\Debug\Core.dll
 C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\Core\obj\Debug\Core.pdb
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\Core\obj\Debug\Core.dll
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\Core\obj\Debug\Core.pdb
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\Core\bin\Debug\Core.dll
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\Core\bin\Debug\Core.pdb

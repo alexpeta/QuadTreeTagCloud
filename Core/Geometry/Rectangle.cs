@@ -23,6 +23,9 @@ namespace Core.Geometry
     #endregion Public Properties
     
     #region Constructor
+    public Rectangle(): this(0,0,0,0)
+    {
+    }
     public Rectangle(int top, int left, int width, int height)
     {
       Top = top;
@@ -30,13 +33,8 @@ namespace Core.Geometry
       Width = width;
       Height = height;
     }
+
     #endregion Constructor
 
-    #region Overrides
-    public override string ToString()
-    {
-      return Area.ToString();
-    }
-    #endregion Overrides
   }
 }

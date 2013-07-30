@@ -43,6 +43,8 @@
     <Compile Include="DataStructures\QuadTreeNode.cs" />
     <Compile Include="Enums\GlobalConstants.cs" />
     <Compile Include="Geometry\Rectangle.cs" />
+    <Compile Include="Helpers\NodeBuilder.cs" />
+    <Compile Include="Helpers\RectangleBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

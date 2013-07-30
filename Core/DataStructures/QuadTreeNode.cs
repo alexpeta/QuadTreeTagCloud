@@ -13,10 +13,24 @@ namespace Core.DataStructures
     public QuadTreeNode[] Children { get; private set; }
 
     #region Constructors
-    public QuadTreeNode(Rectangle surface)
+    public QuadTreeNode(Rectangle surface) 
+        : this(surface,null)
     {
-      Children = new QuadTreeNode[Core.Enums.GlobalConstants.TREE_CHILDREN_COUNT];
-      Surface = surface;
+    }
+    public QuadTreeNode(Rectangle surface, params Rectangle[] children)
+    {
+        Surface = surface;
+        Children = new QuadTreeNode[Core.Enums.GlobalConstants.TREE_CHILDREN_COUNT];
+
+        if (children == null || children.Count() != 4)
+        {
+            return;
+        }
+
+        for (int i = 0; i < Core.Enums.GlobalConstants.TREE_CHILDREN_COUNT; i++)
+        {
+            Children[i] = new QuadTreeNode(children[i]);
+        }
     }
     #endregion Constructors
 
@@ -47,7 +61,7 @@ namespace Core.DataStructures
     }
     public void Visit()
     {
-      Console.WriteLine(Surface);
+      Console.WriteLine(string.Format("w:{0} h:{1} a:{2}",this.Surface.Width, this.Surface.Height, this.Surface.Area));
 
       for (int i = 0; i < Core.Enums.GlobalConstants.TREE_CHILDREN_COUNT; i++)
       {

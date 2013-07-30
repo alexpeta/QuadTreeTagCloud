@@ -14,3 +14,11 @@ C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\bin\Debug\Conso
 C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\bin\Debug\Core.dll
 C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\bin\Debug\Core.pdb
 C:\Users\alexanpe\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\obj\Debug\ConsoleTests.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\bin\Debug\ConsoleTests.exe.config
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\obj\Debug\ConsoleTests.exe
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\obj\Debug\ConsoleTests.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\bin\Debug\ConsoleTests.exe
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\bin\Debug\ConsoleTests.pdb
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\bin\Debug\Core.dll
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\bin\Debug\Core.pdb
+C:\Users\Alex\Documents\GitHub\QuadTreeTagCloud\ConsoleTests\obj\Debug\ConsoleTests.pdb
