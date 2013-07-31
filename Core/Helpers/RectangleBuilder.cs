@@ -9,7 +9,7 @@ namespace Core.Helpers
 {
     public class RectangleBuilder
     {
-        private static Random r = new Random();
+        private static Random random = new Random();
         private static readonly object _syncLock = new object();
 
         public int SizeMaxWidth { get; private set; }
@@ -21,15 +21,6 @@ namespace Core.Helpers
         public static RectangleBuilder ARectangle()
         {
             return new RectangleBuilder();
-        }
-        public static Rectangle GetRectangleWithRandomProperties()
-        {
-          return RectangleBuilder.ARectangle()
-                                     .WithMaxWidth(500)
-                                     .WithMaxHeight(300)
-                                     .WithCanvasMaxHeight(900)
-                                     .WithCanvasMaxWidth(1600)
-                                     .Build();
         }
         #endregion Statics
 
@@ -60,11 +51,26 @@ namespace Core.Helpers
             return this;
         }
 
-        public Rectangle Build()
+        public Rectangle BuildRandom()
         {
-          return new Rectangle(RectangleBuilder.r.Next(1, MaxCanvasHeight), RectangleBuilder.r.Next(1, MaxCanvasWidth), RectangleBuilder.r.Next(1, SizeMaxWidth), RectangleBuilder.r.Next(1, SizeMaxHeight));
+
+          int w =  RectangleBuilder.random.Next(1, SizeMaxWidth);
+          int h = RectangleBuilder.random.Next(1, SizeMaxHeight);
+          do
+          {
+            w = RectangleBuilder.random.Next(1, SizeMaxWidth);
+            h = RectangleBuilder.random.Next(1, SizeMaxHeight);
+            
+          } while (w<h);
+
+          return new Rectangle(RectangleBuilder.random.Next(1, MaxCanvasHeight), RectangleBuilder.random.Next(1, MaxCanvasWidth),w,h);
         }
-        public IEnumerable<Rectangle> BuildList(int count)
+        public Rectangle BuildMaximized()
+        {
+          return new Rectangle(0, 0, SizeMaxWidth, SizeMaxHeight);
+        }
+
+        public IEnumerable<Rectangle> BuildRandomList(int count)
         {
             lock(_syncLock)
             {
@@ -72,7 +78,7 @@ namespace Core.Helpers
 
                 for (int i = 0; i < count; i++)
                 {
-                    result.Add(Build());
+                    result.Add(BuildRandom());
                 }
                 return result;
             }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CloudTagWithQuadTree.ViewModels;
+using Core.DataStructures;
+using Core.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +23,13 @@ namespace CloudTagWithQuadTree
   /// </summary>
   public partial class MainWindow : Window
   {
+    private MainViewModel _viewModel;
+
     public MainWindow()
     {
       InitializeComponent();
+      _viewModel = new MainViewModel();
+      this.DataContext = _viewModel;
     }
   }
 }

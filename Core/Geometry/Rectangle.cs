@@ -9,8 +9,8 @@ namespace Core.Geometry
   public class Rectangle
   {
     #region Public Properties
-    public int Top { get; private set; }
-    public int Left { get; private set; }
+    public int Top { get;  set; }
+    public int Left { get;  set; }
     public int Width { get; private set; }
     public int Height { get; private set; }
     public int Area
@@ -18,6 +18,13 @@ namespace Core.Geometry
       get
       {
         return Width * Height;
+      }
+    }
+    public int InflatedArea
+    {
+      get
+      {
+        return 2 * Width * Height;
       }
     }
     #endregion Public Properties

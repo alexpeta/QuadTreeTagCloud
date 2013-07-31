@@ -23,9 +23,9 @@ namespace Core.DataStructures
       Root.Insert(nodeToInsert);
     }
 
-    public void Visit()
+    public void Visit(Action<QuadTreeNode> action)
     {
-      Root.Visit();
+      Root.Visit(action);
     }
 
     #endregion Public Methods
