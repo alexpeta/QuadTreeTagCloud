@@ -39,12 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cloud\IGlyphRasterizer.cs" />
+    <Compile Include="Cloud\PlacedWord.cs" />
+    <Compile Include="Cloud\PlacementResult.cs" />
+    <Compile Include="Cloud\Spiral.cs" />
+    <Compile Include="Cloud\Tag.cs" />
+    <Compile Include="Cloud\UnplacedWord.cs" />
+    <Compile Include="Cloud\WordCloudPlacer.cs" />
+    <Compile Include="DataStructures\OccupancyBoard.cs" />
     <Compile Include="DataStructures\QuadTree.cs" />
     <Compile Include="DataStructures\QuadTreeNode.cs" />
     <Compile Include="Enums\GlobalConstants.cs" />
+    <Compile Include="Enums\NodeState.cs" />
+    <Compile Include="Geometry\Mask.cs" />
     <Compile Include="Geometry\Rectangle.cs" />
-    <Compile Include="Helpers\NodeBuilder.cs" />
-    <Compile Include="Helpers\RectangleBuilder.cs" />
+    <Compile Include="Helpers\SampleTags.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

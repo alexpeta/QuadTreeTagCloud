@@ -1,5 +1,5 @@
-﻿using Core.DataStructures;
-using Core.Geometry;
+﻿using CloudTagWithQuadTree.Rasterizers;
+using Core.Cloud;
 using Core.Helpers;
 using System;
 using System.Collections.Generic;
@@ -7,70 +7,58 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace CloudTagWithQuadTree.ViewModels
 {
-  public class MainViewModel
+  using GlbCnst = Core.Enums.GlobalConstants;
+
+  public class MainViewModel : BaseViewModel
   {
-    public ObservableCollection<Rectangle> Rectangles { get; set; }
-    
+    public ObservableCollection<PlacedWord> Words { get; private set; }
+    public string Summary { get; private set; }
+
+    public int CanvasWidth
+    {
+      get
+      {
+        return GlbCnst.MAX_WIDTH;
+      }
+    }
+
+    public int CanvasHeight
+    {
+      get
+      {
+        return GlbCnst.MAX_HEIGHT;
+      }
+    }
+
     public MainViewModel()
     {
-      Rectangles = new ObservableCollection<Rectangle>();
+      Words = new ObservableCollection<PlacedWord>();
+      Summary = string.Empty;
       LoadViewModelData();
     }
 
 
     private void LoadViewModelData()
     {
-      Action<QuadTreeNode> addToViewModel = t =>
+      // the typeface here and the FontFamily in MainWindow.xaml must be the same face,
+      // or the masks the placer tested are not the glyphs the window draws
+      var rasterizer = new FormattedTextRasterizer(new Typeface("Segoe UI"));
+      var placer = new WordCloudPlacer(rasterizer, GlbCnst.MAX_WIDTH, GlbCnst.MAX_HEIGHT, GlbCnst.DEFAULT_GUTTER, 10, 64, 0.25, 2013);
+      var result = placer.Place(SampleTags.Build());
+
+      foreach (var word in result.Placed)
       {
-        if (t != null && t.Surface != null)
-        {
-
-          Rectangles.Add(t.Surface);
-        }
-      };
-
-      var rootRectangle = RectangleBuilder.ARectangle()
-                                     .WithMaxWidth(400)
-                                     .WithMaxHeight(200)
-                                     .WithCanvasMaxHeight(600)
-                                     .WithCanvasMaxWidth(900)
-                                     .BuildMaximized();
-
-      QuadTreeNode root = NodeBuilder.ANode()
-                                     .WithSurface(rootRectangle)
-                                     .Build();
-
-      QuadTree tree = new QuadTree(root);
-
-      for (int i = 0; i < 2; i++)
-      {
-        var rb = RectangleBuilder.ARectangle()
-                                     .WithMaxWidth(400)
-                                     .WithMaxHeight(200)
-                                     .WithCanvasMaxHeight(600)
-                                     .WithCanvasMaxWidth(900)
-                                     .BuildRandom();
-
-        var rbChildren = RectangleBuilder.ARectangle()
-                                 .WithMaxWidth(400)
-                                 .WithMaxHeight(200)
-                                 .WithCanvasMaxHeight(500)
-                                 .WithCanvasMaxWidth(800)
-                                 .BuildRandomList(Core.Enums.GlobalConstants.TREE_CHILDREN_COUNT);
-
-        var node = NodeBuilder.ANode()
-                              .WithSurface(rb)
-                              .WithSubSurfaces(rbChildren.ToArray())
-                              .Build();
-        tree.Insert(node);
+        Words.Add(word);
       }
 
-
-
-      tree.Visit(addToViewModel);
+      Summary = string.Format("{0} placed, {1} refused, {2} ms, quadtree {3} nodes, {4} accepted and {5} refused on the tree alone, {6} bitwise tests",
+        result.Placed.Count, result.Unplaced.Count, result.ElapsedMilliseconds,
+        result.Board.Index.CountNodes(), result.Board.FastPathHits, result.Board.FastPathRejects, result.Board.BitwiseTests);
+      RaisePropertyChanged("Summary");
     }
   }
 }
