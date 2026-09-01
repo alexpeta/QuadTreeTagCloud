@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Geometry;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,16 +12,31 @@ namespace Core.DataStructures
     public QuadTreeNode Root { get; private set; }
 
     #region Constructors
-    public QuadTree(QuadTreeNode root)
+    public QuadTree(Rectangle surface)
     {
-      Root = root;
+      Root = new QuadTreeNode(surface);
     }
     #endregion Constructors
 
     #region Public Methods
-    public void Insert(QuadTreeNode nodeToInsert)
+    public void Mark(Rectangle region, Func<Rectangle, bool> isCovered)
     {
-      Root.Insert(nodeToInsert);
+      Root.Mark(region, isCovered);
+    }
+
+    public bool IsFull(Rectangle region)
+    {
+      return Root.IsFull(region);
+    }
+
+    public Core.Enums.NodeState? Classify(Rectangle region)
+    {
+      return Root.Classify(region);
+    }
+
+    public bool IsEmpty(Rectangle region)
+    {
+      return Root.IsEmpty(region);
     }
 
     public void Visit(Action<QuadTreeNode> action)
@@ -28,6 +44,12 @@ namespace Core.DataStructures
       Root.Visit(action);
     }
 
+    public int CountNodes()
+    {
+      int count = 0;
+      Root.Visit(n => count++);
+      return count;
+    }
     #endregion Public Methods
   }
 }
